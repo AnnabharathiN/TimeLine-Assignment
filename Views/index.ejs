@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Timeline</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>The Timeline</h1>
+
+    <form action="/" method="POST">
+      <textarea name="post" rows="3" placeholder="What's on your mind? (min 25 characters)"><%= text %></textarea>
+      <button type="submit">Post</button>
+    </form>
+
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <% posts.forEach(function (p) { %>
+      <div class="post">
+        <small><%= p.createdAt.toLocaleString() %></small>
+        <p><%= p.post %></p>
+        <a href="/show/<%= p._id %>">View</a> |
+        <a href="/edit/<%= p._id %>">Edit</a>
+        <form action="/delete/<%= p._id %>" method="POST" class="inline-form">
+          <button type="submit" class="delete-btn">Delete</button>
+        </form>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

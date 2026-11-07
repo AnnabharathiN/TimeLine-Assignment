@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edit post</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Edit post</h1>
+
+    <form action="/edit/<%= post._id %>" method="POST">
+      <textarea name="post" rows="3"><%= post.post %></textarea>
+      <button type="submit">Save</button>
+    </form>
+
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <a href="/">Cancel</a>
+  </div>
+</body>
+</html>
