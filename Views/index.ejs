@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Timeline</title>
+  <title>The Timeline 3</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
@@ -21,15 +21,31 @@
 
     <% posts.forEach(function (p) { %>
       <div class="post">
-        <small><%= p.createdAt.toLocaleString() %></small>
+        <small><%= p.createdAt.toLocaleString("en-GB", {day: "numeric",month: "long", year :"numeric"}) %></small>
         <p><%= p.post %></p>
-        <a href="/show/<%= p._id %>">View</a> |
         <a href="/edit/<%= p._id %>">Edit</a>
         <form action="/delete/<%= p._id %>" method="POST" class="inline-form">
           <button type="submit" class="delete-btn">Delete</button>
         </form>
-      </div>
+        <% p.comments.forEach(function (c) { %>
+          <div class="comment">
+            <small><%= c.createdAt.toLocaleString("en-GB", {day: "numeric",month: "long", year :"numeric"}) %></small>
+            <p><%= c.comment %></p>
+          </div>
+     
     <% }) %>
-  </div>
+
+    <% const hasError = commentError && String(commentError.postId)=== String(p._id); %>
+    <form action="/posts/<%= p._id %>/comments" method="POST" class="comment-form">  
+     <textarea name="comment" rows="2" placeholder="Post a comment (min 25 characters)"><%= hasError ? commentError.text : "" %></textarea>
+      <button type="submit" class="comment-btn">Comment</button>
+    </form>
+    <% if (hasError) { %>
+      <p class="error"><%= commentError.message %></p>
+    <% } %>
+     </div>
+        <% }) %>    
+
+</div>
 </body>
 </html>

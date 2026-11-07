@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #f0f2f5;
@@ -6,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 0 16px;
 }
@@ -17,11 +21,11 @@ h1 {
 
 textarea {
   width: 100%;
-  box-sizing: border-box;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-family: inherit;
+  display: block;
 }
 
 button {
@@ -34,10 +38,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background: #145dbf;
-}
-
 .post {
   background: white;
   border-radius: 8px;
@@ -46,7 +46,8 @@ button:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-.post p {
+.post p,
+.comment p {
   overflow-wrap: anywhere;
   line-height: 1.5;
 }
@@ -67,6 +68,30 @@ small {
   background: #d93025;
 }
 
-.delete-btn:hover {
-  background: #b3261e;
+.comment {
+  margin: 12px 0 0 24px;
+  padding-left: 12px;
+  border-left: 3px solid #ddd;
+}
+
+.comment-form {
+  margin: 12px 0 0 24px;
+}
+
+.comment-btn {
+  background: #2e9e4f;
+}
+html, body {
+  height: auto;
+  min-height: 100%;
+}
+
+.container {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  position: static;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 16px;
 }
