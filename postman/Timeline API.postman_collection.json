@@ -1,0 +1,824 @@
+{
+  "info": {
+    "_postman_id": "b173aa78-422c-4dca-babc-79192cbfb738",
+    "name": "Timeline API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60073291",
+    "_collection_link": "https://go.postman.co/collection/60073291-b173aa78-422c-4dca-babc-79192cbfb738?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "POSTS",
+      "item": [
+        {
+          "name": "CREATE-POST",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n\r\n{\r\n    \"post\": \"First Post Through the API\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/create-post",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "create-post"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "CREATE-POST",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "\r\n\r\n{\r\n    \"post\": \"First Post Through the API\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/create-post",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "create-post"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "180"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"b4-Kv6mLdY6Y3kkgVbd75ogei7/p9E\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 14:11:07 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"post\": \"First Post Through the API\",\n    \"_id\": \"6af325fb5c3417743e6d66cc\",\n    \"createdAt\": \"2026-11-10T14:11:07.440Z\",\n    \"updatedAt\": \"2026-11-10T14:11:07.440Z\",\n    \"__v\": 0\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET-ALL-POST",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "GET-ALL-POST",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/get-posts",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "get-posts"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "838"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"346-Ft3v+3WFti6gwZkMjbAfObfO+Q4\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 11:33:00 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": true,\n  \"count\": 5,\n  \"data\": [\n    {\n      \"_id\": \"6af2be68e2e6401d9264b3e9\",\n      \"post\": \"This is the updated post text\",\n      \"createdAt\": \"2026-11-10T06:49:12.476Z\",\n      \"updatedAt\": \"2026-11-10T09:47:21.479Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6af225f629054612a6517cc1\",\n      \"post\": \"Working on Assignment 4 ,TimelineAPI\",\n      \"createdAt\": \"2026-11-09T19:58:46.261Z\",\n      \"updatedAt\": \"2026-11-09T19:58:46.261Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aefa822a32e3458daaf700c\",\n      \"post\": \"Comment Section is not working\",\n      \"createdAt\": \"2026-11-07T22:37:22.303Z\",\n      \"updatedAt\": \"2026-11-07T22:37:22.303Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aef9f2c070068fcbdf9c942\",\n      \"post\": \"Comment Section is added\\r\\n\",\n      \"createdAt\": \"2026-11-07T21:59:08.675Z\",\n      \"updatedAt\": \"2026-11-07T21:59:08.675Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aef5da89e149c1409a46fcb\",\n      \"post\": \"It's running Successfully\",\n      \"createdAt\": \"2026-11-07T17:19:36.202Z\",\n      \"updatedAt\": \"2026-11-07T17:22:16.683Z\",\n      \"__v\": 0\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "CREATE-POST too short(400)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "CREATE-POST too short(400)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"post\": \"short\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/create-post",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "create-post"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "94"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"5e-GRN4ci5OsHYHKu4yxPv5H9EVfT0\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 07:08:40 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": false,\n  \"error\": \"Post validation failed: post: Post should be minimum 25 characters\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "UPDATE-POST",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "UPDATE-POST",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"post\": \"This is the updated post text\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/edit-post/6af2be68e2e6401d9264b3e9",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "edit-post",
+                    "6af2be68e2e6401d9264b3e9"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "183"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"b7-T5ExloV51yaFfI/d+gOgL4t2c4U\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 09:47:21 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"_id\": \"6af2be68e2e6401d9264b3e9\",\n    \"post\": \"This is the updated post text\",\n    \"createdAt\": \"2026-11-10T06:49:12.476Z\",\n    \"updatedAt\": \"2026-11-10T09:47:21.479Z\",\n    \"__v\": 0\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "UPDATE-POST too short(400)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "UPDATE-POST too short(400)",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"post\" : \"short\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/edit-post/6af2be68e2e6401d9264b3e9",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "edit-post",
+                    "6af2be68e2e6401d9264b3e9"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "89"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"59-lUtHu5Iib0VcCtTK88sKmEi4Ki0\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 09:58:19 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": false,\n  \"error\": \"Validation failed: post: Post should be minimum 25 characters\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "DELETE-POST",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "DELETE-POST",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/delete-post/6a5fb5c3417743e6d66ccf32",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "delete-post",
+                    "6a5fb5c3417743e6d66ccf32"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "49"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"31-m7FnNMSnQPKrseRltdnn6ZtVuGU\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 15:06:03 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": false,\n  \"error\": \"Internal Server Error\"\n}"
+            },
+            {
+              "name": "DELETE-POST",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/delete-post/6af325fb5c3417743e6d66cc",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "delete-post",
+                    "6af325fb5c3417743e6d66cc"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "180"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"b4-6RFt1IQN2M5NIxEz7zkR8IzNUqM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Nov 2026 16:13:04 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"_id\": \"6af325fb5c3417743e6d66cc\",\n    \"post\": \"First Post Through the API\",\n    \"createdAt\": \"2026-11-10T14:11:07.440Z\",\n    \"updatedAt\": \"2026-11-10T14:11:07.440Z\",\n    \"__v\": 0\n  }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "COMMENTS",
+      "item": [
+        {
+          "name": "Create-Comments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Create-Comments",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"comment\":\"This is the first comment through API\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/post-post-comment/6af2be68e2e6401d9264b3e9",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "post-post-comment",
+                    "6af2be68e2e6401d9264b3e9"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "228"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"e4-f0b5y6evy+s8x3gxKVbmHcVunyw\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 11:44:10 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"post\": \"6af2be68e2e6401d9264b3e9\",\n    \"comment\": \"This is the first comment through API\",\n    \"_id\": \"6af3038aa6a878fa24d46350\",\n    \"createdAt\": \"2026-11-10T11:44:10.704Z\",\n    \"updatedAt\": \"2026-11-10T11:44:10.704Z\",\n    \"__v\": 0\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get-Post-Comments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Get-Post-Comments",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/get-post-comment/6af2be68e2e6401d9264b3e9",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "get-post-comment",
+                    "6af2be68e2e6401d9264b3e9"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "36"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"24-YA2qaqoHN76SgtFfK4UBGqyVP1w\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 11:01:16 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": true,\n  \"count\": 0,\n  \"data\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create-Comments too short(400)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Create-Comments too short(400)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"comment\":\"short\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/post-post-comment/6af2be68e2e6401d9264b3e9",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "post-post-comment",
+                    "6af2be68e2e6401d9264b3e9"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "103"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"67-tIjFb+9rYo9zcNJ3mDxN7s3BfD0\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 11:54:12 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": false,\n  \"error\": \"Comment validation failed: comment: Comment should be minimum 25 characters\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Invalid-ID (400)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Invalid-ID (400)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/get-post-comment/122",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "get-post-comment",
+                    "122"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "43"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"2b-zs+jUP0RmxOQrw7ndAXk1Ll69SQ\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 10 Nov 2026 12:00:25 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"success\": false,\n  \"error\": \"Invalid post ID\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
