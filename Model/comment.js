@@ -5,7 +5,7 @@ const commentSchema = new mongoose.Schema(
         comment: {
             type: String,   
             required: true,
-            minlength: [5, "Comment should be minimum 5 characters"],
+            minlength: [25, "Comment should be minimum 25 characters"],
         },
     },
     {timestamps: true}
